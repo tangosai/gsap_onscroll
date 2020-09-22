@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>:: ::</title>
+    <link rel="stylesheet" href="plugins.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="wrapper">
+       
+       <section class="h-100vh">
+           <div class="text "><p>Keep Scrolling</p></div>
+       </section>
+       
+        <section class="sa-scroll-img">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="imgs">
+                            <img src="p.png" alt="" class="sa-img img_1">
+                            <img src="front.png" alt="" class="sa-img img_2 w-350">
+                            <img src="ui.png" alt="" class="sa-img img_3">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+
+                        <div class="page">
+                            <div class="right">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, dolor. Officiis nulla eveniet tenetur praesentium modi maiores, ducimus, eius dolor autem nemo inventore ut quod distinctio quasi hic, corrupti consectetur quos a. Nemo maxime incidunt fugiat temporibus cumque, doloremque aut, qui error, obcaecati aperiam saepe ad omnis in nulla rerum!</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+    <script src="plugins.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".imgs",
+                start: "center center",
+//                markers: true,
+                scrub: true,
+                pin: true,
+            }
+        })
+        .from(".img_2",10 ,{yPercent: 60,scale: 2})
+        .from(".img_1",10 ,{opacity: 0, x:100 ,delay: 1.6})
+        .from(".img_3",10 ,{opacity: 0, x:-100 ,delay: 1.6})
+//        .from(".img_2",10 ,{x:innerHeight * 1,scale:2})
+//        .from(".text2",10 ,{x:innerWidth * -1})
+//        .from(".text3",10 ,{x:innerWidth * 1})
+//        .from(".bike",10 ,{y:innerHeight * 1,rotate: 360})
+
+
+    </script>
+
+
+</body>
+
+</html>
